@@ -1,0 +1,36 @@
+import org.code.neighborhood.*;
+
+public class NeighborhoodRunner {
+  public static void main(String[] args) {
+
+    // Calls the functions and methods to paint the base and the bulb
+
+    basePainter vincent = new basePainter();
+
+    vincent.setPaint(1000);
+    vincent.getToLocation();
+    vincent.paintBase("black");
+    vincent.paintWire("gray");
+    vincent.returnToStart();
+
+bulbPainter valerie = new bulbPainter();
+
+    valerie.setPaint(1000);
+    valerie.moveToLocation();
+    valerie.paintBulb("yellow");
+    valerie.returnToPosition();
+
+
+
+
+
+
+
+
+
+
+
+    
+  }
+  
+}

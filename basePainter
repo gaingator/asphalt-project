@@ -1,0 +1,129 @@
+import org.code.neighborhood.*;
+
+public class basePainter extends bulbPainter{
+// code to position painter to location
+public void getToLocation() {
+
+while (canMove()) {
+  move();
+}
+
+  if (!canMove()) {
+turnRight();
+  }
+while (canMove()) {
+  move();
+}
+
+  if (!canMove()){
+    turnRight();
+  }
+move();
+move();
+move();
+move();
+move();
+move();
+  turnRight();
+  move();
+  move();
+  move();
+   turnLeft();
+  }
+  /*
+  Here is the code to do the  magic painting. Does not utilize loops, but instead 
+  repeats code.
+  */
+public void paintBase(String color) {
+   
+      paint(color);
+      move();
+      paint(color);
+      move();
+      paint(color);
+      move();
+      paint(color);
+  turnRight();
+  move();
+  paint(color);
+  turnRight();
+   move();
+  paint(color);
+  move();
+  paint(color);
+  move();
+  paint(color);
+  
+}
+
+public void paintWire(String color){
+
+turnAround();
+  move();
+  turnRight();
+  move();
+  paint(color);
+  move();
+  paint(color);
+  move();
+  paint(color);
+  turnLeft();
+  move();
+  paint(color);
+  turnLeft();
+  paint(color);
+  move();
+  paint(color);
+  move();
+  paint(color);
+}
+
+
+// method to return back to the top right corner of the screen and the area.
+
+  
+public void returnToStart() {
+
+while(canMove()){
+
+move();
+  
+}
+
+if (!canMove()){
+  turnLeft();
+
+}
+
+  while(canMove()){
+    move();
+  }
+if (!canMove()){
+  turnLeft();
+
+}
+  
+  while(canMove()){
+    move();
+}
+
+
+
+  
+}
+
+}
+
+ 
+
+  
+
+
+
+
+
+
+
+
+  
+

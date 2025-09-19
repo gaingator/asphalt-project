@@ -1,0 +1,158 @@
+ import org.code.neighborhood.*; 
+
+ public class bulbPainter extends PainterPlus{
+      
+   public void moveToLocation() {
+
+
+while (canMove()){
+  move();
+}
+
+  if (!canMove()) {
+turnRight();
+  }
+     move();
+     move();
+     turnRight();
+     move();
+     move();
+     move();
+     move();
+   }
+/*
+* This is the function to paint the bulb. 
+It utilizes loops and increments to move and paint at the same command.
+*/
+
+public void paintBulb(String color){
+
+  move();
+paint(color);
+  move();
+paint(color);
+  move();
+paint(color);
+  move();
+  paint(color);
+  move();
+   paint(color);
+  move();
+  paint(color);
+  while(canMove()){
+    move();
+  }
+   if (!canMove()){
+  turnLeft();
+  }
+move();
+turnLeft();
+move();
+move();
+move();
+move();
+  paintAndMoveNumTimes(7, "yellow");
+  turnRight();
+  paint(color);
+  move();
+  turnLeft();
+  move();
+  paint(color);
+  turnAround();
+  move();
+  paintAndMoveNumTimes(9, "yellow");
+
+  turnLeft();
+  move();
+  turnLeft(); 
+  move();
+ paintAndMoveNumTimes(10, "yellow");
+
+  turnRight();
+  move();
+  turnRight();
+  move();
+  paintAndMoveNumTimes(10, "yellow");
+
+  turnLeft();
+  move();
+  turnLeft(); 
+  move();
+  paintAndMoveNumTimes(10, "yellow");
+
+  turnRight();
+  move();
+  turnRight();
+  move();
+ paintAndMoveNumTimes(4, "yellow");
+  move();
+  move();
+paintAndMove("yellow");
+  paintAndMoveNumTimes(3, "yellow");
+
+  turnLeft();
+  move();
+  turnLeft();
+  move();
+  move();
+  paintAndMoveNumTimes(3, "yellow");
+  move();
+  move();
+  paintAndMoveNumTimes(3, "yellow");
+
+  turnRight();
+  move();
+  turnRight();
+  move();
+  move();
+  paintAndMoveNumTimes(2, "yellow");
+  move();
+  move();
+  paintAndMoveNumTimes(2, "yellow");
+}
+// method used to paint and move, will be called in the code later.
+public void paintAndMove(String color){
+  paint(color);
+  move();
+}
+
+// code used for sprite to return back to the position
+public void returnToPosition() {
+
+while(canMove()){
+
+move();
+  
+}
+
+if (!canMove()){
+  turnRight();
+
+}
+
+  while(canMove()){
+    move();
+  }
+if (!canMove()){
+  turnRight();
+
+}
+  
+  while(canMove()){
+    move();
+}
+
+/*
+ This is a loop that was used in combination with the other method 
+ to create a single peice of code that could paint multiple squares and move at the same time.
+*/
+
+  
+}
+  public void paintAndMoveNumTimes(int num, String color) {
+    for (int i = 0; i < num; i++) {
+      paintAndMove(color);
+    }
+  }
+   
+ }
